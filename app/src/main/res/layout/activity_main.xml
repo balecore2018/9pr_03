@@ -51,4 +51,15 @@
         app:layout_constraintTop_toBottomOf="@id/bthTertiary"
         />
 
+    <com.example.uicomponents.edittext.EditTextCustom
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:hint="Иванов"
+        app:label="Укажите фамилию"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bthSecondary"
+        app:value="123123" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

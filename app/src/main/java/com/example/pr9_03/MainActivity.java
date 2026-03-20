@@ -8,6 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.uicomponents.BthBig;
+import com.example.uicomponents.BthCustom;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,10 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+
+        BthBig bthPrimary = findViewById(R.id.bthPrimary);
+        BthBig bthEnable = findViewById(R.id.bthEnable);
+        BthBig bthTertiary = findViewById(R.id.bthTertiary);
+        BthBig bthSecondary = findViewById(R.id.bthSecondary);
+
+        bthPrimary.init("Отправить", BthCustom.TypeButton.PRIMARY);
+        bthEnable.setEnabled(false);
+        bthTertiary.init("Авторизоваться", BthCustom.TypeButton.TETRYALY);
+        bthSecondary.init("Забыли пароль?", BthCustom.TypeButton.SECONDARY);
     }
 }

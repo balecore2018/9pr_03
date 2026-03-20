@@ -33,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation project(":UIComponents")
+
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
